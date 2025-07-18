@@ -4,7 +4,7 @@ import "../structs/Structs.wdl"
 task FirstTask {
     meta {
         # task-level metadata can go here
-        description: "second task"
+        description: "first task"
     }
 
     parameter_meta {
