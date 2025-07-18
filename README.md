@@ -8,13 +8,16 @@ gh repo create my-terra-workflow --template mjfos2r/TemplateTerraWorkflow
 ```
 
 ## Dependencies
+
 - [uv](https://astral.sh/uv)
 - [make](https://www.gnu.org/software/make/)
 - [docker](https://www.docker.com)
 - [shellcheck](https://www.shellcheck.net)
 
 ## Setup dev environment
-To get this all set up and groovy, simply ensure you have the dependencies listed above and execute `dev_setup.sh`
+
+To get this all set up and groovy, simply ensure you have the dependencies listed above and execute `./dev_env/dev_setup.sh`
+
 Which does the following:
 
 1. creates a virtual environment using uv
@@ -27,9 +30,16 @@ Which does the following:
 
 Activate the virtual environment and you're good to go.
 >protip: I have these handy aliases in my .bashrc:
+>
 > - `alias uva="source .venv/bin/activate"`
 > - `alias uvd="deactivate"`
 > - `alias uvi="uv pip install"`
+
+## Develop inside of Docker container
+
+I am also writing a docker container to serve as the development environment with all dependencies pre-installed.
+
+To use it, you can execute the helper script: `./dev_env/launch_container.sh`
 
 ## Important placeholder locations
 Since this was originally *my* template, I have *my* information as placeholder.
@@ -56,6 +66,7 @@ If you *do* need to write containers, I've simplified the whole process.
 You can also do `make build` and `make push` in each of your container directories while testing so you don't have to wait for everything to build and push.
 
 ## Managing Tags and Versions
+
 for versioning this workflow, be sure to change your version in `.VERSION` and use `make tag` to create and push the tag.
 
 Manage versions for your containers in their respective makefiles.
