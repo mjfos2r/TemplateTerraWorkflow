@@ -3,10 +3,10 @@
 This repository contains a template workflow that serves as a comprehensive starting point for writing pipelines to run in Terra. 
 
 ## Dependencies
-[uv](https://astral.sh/uv)
-[make](https://www.gnu.org/software/make/)
-[docker](https://www.docker.com)
-[shellcheck](https://www.shellcheck.net)
+- [uv](https://astral.sh/uv)
+- [make](https://www.gnu.org/software/make/)
+- [docker](https://www.docker.com)
+- [shellcheck](https://www.shellcheck.net)
 
 ## Setup dev environment
 To get this all set up and groovy, simply ensure you have the dependencies listed above and execute `dev_setup.sh`
