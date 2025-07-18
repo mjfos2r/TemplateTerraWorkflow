@@ -9,9 +9,6 @@ This repository contains a template workflow that serves as a comprehensive star
 - [shellcheck](https://www.shellcheck.net)
 
 ## Setup dev environment
-
-**Before anything else, rename this directory to your desired workflow name and delete `.git`**
-
 To get this all set up and groovy, simply ensure you have the dependencies listed above and execute `dev_setup.sh`
 Which does the following:
 
