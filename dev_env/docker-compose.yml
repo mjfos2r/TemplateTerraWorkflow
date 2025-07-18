@@ -1,5 +1,3 @@
-version: '3.8' # is this correct or hallucination?
-
 services:
   dev:
     build:
