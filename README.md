@@ -47,7 +47,9 @@ If you *do* need to write containers, I've simplified the whole process.
 You can also do `make build` and `make push` in each of your container directories while testing so you don't have to wait for everything to build and push.
 
 ## Managing Tags and Versions
-for versioning this workflow, be sure to change your version in `.VERSION` and use `make tag` to create and push the tag.manage versions for your containers in their respective makefiles.
+for versioning this workflow, be sure to change your version in `.VERSION` and use `make tag` to create and push the tag.
+
+Manage versions for your containers in their respective makefiles.
 
 ## Running miniwdl check without committing changes
 just use `make check` and both miniwdl and yamllint will run on every `*.wdl` and `*.yaml/yml` file in the project.
