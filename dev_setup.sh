@@ -18,5 +18,4 @@ pre-commit install
 
 echo "Dev environment has been setup! execute the following command to begin:"
 echo "source .venv/bin/activate"
-echo "If you forgot to rename this directory, do so, delete .git && .venv then try running this script again!"
 exit 0
