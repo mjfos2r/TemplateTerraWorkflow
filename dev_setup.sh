@@ -3,10 +3,7 @@ set -euo pipefail
 
 # howdy. this script is gonna initialize the dev environment so that everything works properly.
 
-# first things first, let's wipe .git/ so we can setup our own repository.
-rm -rf .git
-
-# next we should set up the env and install our linters and whatnot.
+# first things first, we should set up the env and install our linters and whatnot.
 uv venv
 source .venv/bin/activate
 uv pip install -r dev_deps.txt
