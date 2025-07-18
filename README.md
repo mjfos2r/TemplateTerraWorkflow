@@ -1,6 +1,11 @@
 # TemplateTerraWorkflow
 
 This repository contains a template workflow that serves as a comprehensive starting point for writing pipelines to run in Terra.
+To begin using this, simply click "Use this template" at the top right of the page or alternatively use the following command if
+you have [gh cli](https://cli.github.com/manual/):
+```
+gh repo create my-terra-workflow --template mjfos2r/TemplateTerraWorkflow
+```
 
 ## Dependencies
 - [uv](https://astral.sh/uv)
@@ -13,12 +18,12 @@ To get this all set up and groovy, simply ensure you have the dependencies liste
 Which does the following:
 
 1. creates a virtual environment using uv
-2. installs dev_deps.txt using uv. contents:
+2. installs dev_deps.txt using uv.
+   contents:
     - [pre-commit](https://pre-commit.com) to check files using the following linters at time before commit.
     - [miniwdl](https://github.com/chanzuckerberg/miniwdl) for linting and checking wdl files. (needs shellcheck)
     - [yamllint](https://github.com/adrienverge/yamllint) for linting and checking yaml files.
-3. Initializes a local git repository.
-4. installs pre-commit to the newly initialized repo.
+3. installs pre-commit to this repository.
 
 Activate the virtual environment and you're good to go.
 >protip: I have these handy aliases in my .bashrc:
@@ -27,8 +32,9 @@ Activate the virtual environment and you're good to go.
 > - `alias uvi="uv pip install"`
 
 ## Important placeholder locations
-Since this is *my* template, I have *my* information as placeholder.
+Since this was originally *my* template, I have *my* information as placeholder.
 To use this template, you will need to change these to your own.
+>In addition to everything else that needs changing. this is a template after all.
 
 1. `Makefile`; Line 3; Line 4;
 2. `.dockstore.yml`; Line 3; Line 5;
@@ -36,6 +42,8 @@ To use this template, you will need to change these to your own.
 4. `containers/**/Makefile`; Line 3; Line 4;
 
 ## Managing containers
+I've included two example Dockerfiles and their makefiles.
+
 This repo is set up to manage multiple containers required for the workflow you're writing.
 If you don't need to write any containers, you can safely delete the containers directory and ignore the commands in the makefile.
 If you *do* need to write containers, I've simplified the whole process.
@@ -53,4 +61,4 @@ for versioning this workflow, be sure to change your version in `.VERSION` and u
 Manage versions for your containers in their respective makefiles.
 
 ## Running miniwdl check without committing changes
-just use `make check` and both miniwdl and yamllint will run on every `*.wdl` and `*.yaml/yml` file in the project.
+just use `make check` and both miniwdl and yamllint will run on every `*.wdl` and `*.yaml` file in the project.
