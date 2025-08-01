@@ -66,7 +66,7 @@ workflows:
     # A boolean that will change the default version to be displayed on Dockstore. Default: False.
     # A value of true will automatically display the latest tag updated as default.
     # A value of false will retain the default version that has been specified via the Dockstore UI.
-    latestTagAsDefault: <Boolean>
+    latestTagAsDefault: 'true'
 
     # 'enableAutoDois' is a workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch
     # to control whether DOIs are automatically issued for tags. Default: true.
