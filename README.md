@@ -42,7 +42,12 @@ I am also writing a docker container to serve as the development environment wit
 To use it, you can execute the helper script: `./dev_env/launch_container.sh`
 
 ## Important placeholder locations
+<<<<<<< Updated upstream
 Since this was originally *my* template, I have *my* information as placeholder.
+=======
+
+Since this is *my* template, I have *my* information as placeholder.
+>>>>>>> Stashed changes
 To use this template, you will need to change these to your own.
 >In addition to everything else that needs changing. this is a template after all.
 
@@ -52,7 +57,10 @@ To use this template, you will need to change these to your own.
 4. `containers/**/Makefile`; Line 3; Line 4;
 
 ## Managing containers
+<<<<<<< Updated upstream
 I've included two example Dockerfiles and their makefiles.
+=======
+>>>>>>> Stashed changes
 
 This repo is set up to manage multiple containers required for the workflow you're writing.
 If you don't need to write any containers, you can safely delete the containers directory and ignore the commands in the makefile.
@@ -72,4 +80,9 @@ for versioning this workflow, be sure to change your version in `.VERSION` and u
 Manage versions for your containers in their respective makefiles.
 
 ## Running miniwdl check without committing changes
+<<<<<<< Updated upstream
 just use `make check` and both miniwdl and yamllint will run on every `*.wdl` and `*.yaml` file in the project.
+=======
+
+just use `make check` and both miniwdl and yamllint will run on every `*.wdl` and `*.yaml/yml` file in the project.
+>>>>>>> Stashed changes
